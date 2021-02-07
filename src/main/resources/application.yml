@@ -1,0 +1,20 @@
+# 应用名称
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cliback?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  application:
+    name: cliback
+server:
+  port: 8080
+  profiles:
+    active: dev
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+    - classpath*:com/**/mapper/*.xml
+self:
+  swagger:
+    backpackage: com.ailian.cliback
+
